@@ -11,5 +11,5 @@ Notes below relate to the things I learned and the problems I had.
 ⭐ Fixed by re-setting lastIndex after each match
 
 ## Day 2
-⭐ More regular expressions 🧙
+⭐ More regular expressions 🧙\
 ⭐ I liked being able to re-use my findMaxValue() function in puzzle 2
