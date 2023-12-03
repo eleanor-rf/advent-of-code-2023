@@ -149,7 +149,7 @@ function traverse(input) {
 }
 
 function calculateRatios(input) {
-    const starMap = traverse(inputSplit);
+    const starMap = traverse(input);
     ratios = [];
     for (let i = 0; i < starMap.length; i ++) {
         if (starMap[i]['neighbours'].length === 2) {
