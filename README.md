@@ -13,3 +13,7 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 2
 ⭐ More regular expressions 🧙\
 ⭐ I liked being able to re-use my findMaxValue() function in puzzle 2
+
+#### Day 3
+⭐ Regular expressions saved me yet again, this time from "undefined"!\
+⭐ My first time trying to solve a puzzle in a 2D array
