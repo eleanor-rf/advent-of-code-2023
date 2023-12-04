@@ -98,7 +98,7 @@ function findStars(input){
                 data.push({
                     row: row,
                     column: column
-                })
+                });
             }
         }
     }
@@ -130,7 +130,7 @@ function traverse(input) {
                 (starColumn - 1 <= numbers[j]['endColumn'] && numbers[j]['endColumn'] <= starColumn + 1))
                 )
                 ) {
-                starNeighbours.push(numbers[j]['number'])
+                starNeighbours.push(numbers[j]['number']);
             }
             // check for neighbours on the row below
             if (
@@ -140,7 +140,7 @@ function traverse(input) {
                 (starColumn - 1 <= numbers[j]['endColumn'] && numbers[j]['endColumn'] <= starColumn + 1))
                 )
                 ) {
-                starNeighbours.push(numbers[j]['number'])
+                starNeighbours.push(numbers[j]['number']);
             }
             stars[i]['neighbours'] = starNeighbours;
         }
