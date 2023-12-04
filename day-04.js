@@ -10,7 +10,7 @@ function findCommonValues(input){
 }
 
 function twoToPowerOfMatches(input){
-    const commonNumbers = findCommonValues(input)
+    const commonNumbers = findCommonValues(input);
     
     // return 2^(matches-1) or 0 if there aren't any matches
     if (commonNumbers.length === 0) {
@@ -42,16 +42,13 @@ let numberInfo = [];
         });
     }
 
+let sum = 0;
 for (let i = 0; i < numberInfo.length; i++) {
-    if (numberInfo[i]['matches'] > 0){
+    if (numberInfo[i]['matches'] > 0) {
         for (let j = 0; j < numberInfo[i]['matches']; j++) {
-        numberInfo[i+j+1]['copies'] += numberInfo[i]['copies'];
+            numberInfo[i+j+1]['copies'] += numberInfo[i]['copies'];
         }
     }
-}
-
-let sum = 0;
-for (let i = 0; i < numberInfo.length; i++){
     sum += numberInfo[i]['copies'];
 }
 
