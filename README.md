@@ -17,3 +17,6 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 3
 ⭐ Regular expressions saved me yet again, this time from "undefined"!\
 ⭐ My first time trying to solve a puzzle in a 2D array
+
+#### Day 4
+⭐ Year of the regex! I have found https://regex101.com/ very useful
