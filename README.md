@@ -22,5 +22,5 @@ Notes below relate to the things I learned and the problems I had.
 ⭐ Year of the regex! I have found https://regex101.com/ very useful
 
 #### Day 5
-⭐ Today I learned to read instructions properly rather than just making assumptions...!\n
+⭐ Today I learned to read instructions properly rather than just making assumptions...!\
 ⭐ Starting to feel quite challenging, I hope to persevere with at least the Part 1s for as long as possible
