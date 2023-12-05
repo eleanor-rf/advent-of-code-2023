@@ -118,4 +118,4 @@ function findLowestLocation() {
 }
 
 
-console.log(findLowestLocation())
+console.log(findLowestLocation());
