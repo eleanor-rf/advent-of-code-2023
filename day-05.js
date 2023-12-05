@@ -1,6 +1,6 @@
 // parsing
 const inputSplit = input.split('\n').filter(n=>n);
-const seedList = inputSplit[0].split(': ')[1].split(' ')
+const seedList = inputSplit[0].split(': ')[1].split(' ');
 const numberOfSeeds = seedList.length;
 
 function getMaps(input, startValue, endValue) {
@@ -28,7 +28,7 @@ const parsedRanges = [seedToSoilMap, soilToFertilizerMap, fertilizerToWaterMap, 
 function conv(arr) {
   return arr.map(function(v) {
     return Array.isArray(v) ? conv(v) : Number(v) || 0;
-  })
+  });
 }
 
 ranges = conv(parsedRanges)
@@ -41,7 +41,7 @@ function findLocationFromSeed(seed) {
     for (let i = 0; i < ranges.length; i ++){
         for (let j = 0; j < ranges[i].length; j++) {
             let maxSeed = ranges[i][j][1] + ranges[i][j][2];
-            let minSeed = ranges[i][j][1]
+            let minSeed = ranges[i][j][1];
             if (current >= minSeed && current <= maxSeed) {
                 current = ranges[i][j][0] + (current - minSeed);
                 break;
@@ -98,13 +98,24 @@ function isSeedInRange(seed) {
   return false; 
 }
 
-// narrowed this down by running it at 10 000 000 intervals then decreasing the intervals
-// inelegant, but functional!
-for (let i = 0; ; i+=10000000) {
-    const seed = findSeedFromLocation(i)
-    console.log(`Seed: ${seed}, location: ${i}`)
-    if (isSeedInRange(seed)){
-        console.log(`Lowest location - seed: ${seed}, location: ${i}`);
-        break;
+// search at decreasing intervals
+// MUCH faster than the brute forcing i was trying before
+function findLowestLocation() {
+    let interval = 10000000
+    let lowestLocation = 0
+    while (interval > 1) {
+    for (let i = 0; ; i+=interval) {
+        const seed = findSeedFromLocation(i)
+        if (isSeedInRange(seed)){
+            interval /= 10;
+            i -= interval;
+            lowestLocation = i;
+            break;
+            }
+        }
     }
+    return `For Part 2, the lowest location is ${lowestLocation}`;
 }
+
+
+console.log(findLowestLocation())
