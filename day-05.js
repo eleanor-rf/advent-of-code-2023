@@ -100,7 +100,7 @@ function isSeedInRange(seed) {
 
 // narrowed this down by running it at 10 000 000 intervals then decreasing the intervals
 // inelegant, but functional!
-for (let i = 56931768; ; i+=1) {
+for (let i = 0; ; i+=10000000) {
     const seed = findSeedFromLocation(i)
     console.log(`Seed: ${seed}, location: ${i}`)
     if (isSeedInRange(seed)){
