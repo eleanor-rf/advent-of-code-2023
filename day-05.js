@@ -22,7 +22,7 @@ const lightToTemperatureMap = getMaps(inputSplit,'light-to-temperature map:', 't
 const temperatureToHumidityMap = getMaps(inputSplit,'temperature-to-humidity map:', 'humidity-to-location map:');
 const humidityToLocationMap = getMaps(inputSplit,'humidity-to-location map:',-1);
 
-ranges = [seedToSoilMap, soilToFertilizerMap, fertilizerToWaterMap, waterToLightMap, lightToTemperatureMap, temperatureToHumidityMap, humidityToLocationMap]
+const parsedRanges = [seedToSoilMap, soilToFertilizerMap, fertilizerToWaterMap, waterToLightMap, lightToTemperatureMap, temperatureToHumidityMap, humidityToLocationMap]
 
 // convert all strings in nested array to numbers
 function conv(arr) {
@@ -31,18 +31,19 @@ function conv(arr) {
   })
 }
 
+ranges = conv(parsedRanges)
 //parsing over!
 
 //search through array of ranges
-function findLocations(seed, input) {
-    // input should = 'conv(ranges)'
+function findLocationFromSeed(seed) {
+    // input should = 'ranges'
     let current = seed;
-    for (let i = 0; i < input.length; i ++){
-        for (let j = 0; j < input[i].length; j++) {
-            let maxSeed = input[i][j][1] + input[i][j][2];
-            let minSeed = input[i][j][1]
+    for (let i = 0; i < ranges.length; i ++){
+        for (let j = 0; j < ranges[i].length; j++) {
+            let maxSeed = ranges[i][j][1] + ranges[i][j][2];
+            let minSeed = ranges[i][j][1]
             if (current >= minSeed && current <= maxSeed) {
-                current = input[i][j][0] + (current - minSeed);
+                current = ranges[i][j][0] + (current - minSeed);
                 break;
             }
         }
@@ -50,10 +51,60 @@ function findLocations(seed, input) {
     return current;
 }
 
-// call findLocations on each seed
+// call findLocationFromSeed on each seed
 let locations = [];
 for (const seed of seedList) {
-    locations.push(findLocations(seed,conv(ranges)));
+    locations.push(findLocationFromSeed(seed));
 }
 
-console.log((`For Part 1, the smallest location is ${Math.min(...locations)}`));
+//console.log((`For Part 1, the smallest location is ${Math.min(...locations)}`));
+
+// part 2 - finding seeds from their location
+function findSeedFromLocation(location){
+    let seed = location;
+    for (let i = (ranges.length - 1); i > -1; i--) {
+        for (let j = 0; j < ranges[i].length; j++) {
+            let maxSource = ranges[i][j][0] + (ranges[i][j][2] - 1); // note to self: read the instructions next time
+            // ranges[i][j][2] contained range LENGTH
+            // unclear why this didn't cause trouble on problem 1
+            let minSource = ranges[i][j][0];
+            if (seed <= maxSource && seed >= minSource) {
+                seed = ranges[i][j][1] + (seed - minSource);
+                break;
+            }
+        }
+    }
+    return seed;
+}
+
+// create array of objects with minimum and maximum values in each seed range
+let seedListToInts = conv(seedList)
+let seedRanges = [];
+for (let i = 0; i < seedListToInts.length; i+=2) {
+    seedRanges.push({
+        min: seedListToInts[i],
+        max: seedListToInts[i]+seedListToInts[i+1]-1
+    })
+}
+seedRanges.sort((a, b) => a.min - b.min); // possibly not necessary
+
+// check if seed is within each range in seedRanges
+function isSeedInRange(seed) {
+     for (const range of seedRanges) {
+        if (seed >= range.min && seed <= range.max) {
+            return true;
+        }
+    }
+  return false; 
+}
+
+// narrowed this down by running it at 10 000 000 intervals then decreasing the intervals
+// inelegant, but functional!
+for (let i = 56931768; ; i+=1) {
+    const seed = findSeedFromLocation(i)
+    console.log(`Seed: ${seed}, location: ${i}`)
+    if (isSeedInRange(seed)){
+        console.log(`Lowest location - seed: ${seed}, location: ${i}`);
+        break;
+    }
+}
