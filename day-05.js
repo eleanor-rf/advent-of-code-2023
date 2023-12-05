@@ -1,6 +1,6 @@
 // parsing
 const inputSplit = input.split('\n').filter(n=>n);
-const seedList = inputSplit[0].split(': ')[1].split(' ');
+const seedList = inputSplit[0].split(': ')[1].split(' ');;
 const numberOfSeeds = seedList.length;
 
 function getMaps(input, startValue, endValue) {
