@@ -24,3 +24,7 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 5
 ⭐ Today I learned to read instructions properly rather than just making assumptions...!\
 ⭐ Starting to feel quite challenging, I hope to persevere with at least the Part 1s for as long as possible
+
+#### Day 6
+⭐ Phew! Today felt quite manageable and less brute force-y than yesterday thanks to some maths 😎\
+⭐ It's fun to think about a more efficient way to solve a problem
