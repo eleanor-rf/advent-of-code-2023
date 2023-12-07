@@ -28,3 +28,7 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 6
 ⭐ Phew! Today felt quite manageable and less brute force-y than yesterday thanks to some maths 😎\
 ⭐ It's fun to think about a more efficient way to solve a problem
+
+#### Day 7
+⭐ Not too proud of today's extremely messy code\
+⭐ However I used a custom sort function for the first time which was fun to figure out!
