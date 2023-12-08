@@ -32,3 +32,7 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 7
 ⭐ Not too proud of today's extremely messy code\
 ⭐ However I used a custom sort function for the first time which was fun to figure out!
+
+#### Day 8
+⭐ More maths! I looked up a function to calculate LCM for several numbers at once.\
+⭐ I feel bad for the ghost who has to take ~10^13 steps to get where they're going...
