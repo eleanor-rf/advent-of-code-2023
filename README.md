@@ -36,3 +36,7 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 8
 ⭐ More maths! I looked up a function to calculate LCM for several numbers at once.\
 ⭐ I feel bad for the ghost who has to take ~10^13 steps to get where they're going...
+
+#### Day 9
+⭐ I liked this puzzle, working with sequences is fun for me for some reason\
+⭐ Maybe I'll regret saying that soon!
