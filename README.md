@@ -40,3 +40,12 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 9
 ⭐ I liked this puzzle, working with sequences is fun for me for some reason\
 ⭐ Maybe I'll regret saying that soon!
+
+#### Day 10
+⭐ I find 2D array puzzles really tricky, so I'm glad to be able to practice them!\
+⭐ AoC subreddit helped me think of a way to solve part 2 involving parity of vertical sections of pipe
+
+#### Day 11
+⭐ Another 2D array puzzle, more practice for me\
+⭐ Tried to brute force at first, got my first ever 'out of memory' error\
+⭐ Figured out I could modify the coordinates by adding 999999 instead of trying to iterate through a 2D array with millions of rows and columns... !
