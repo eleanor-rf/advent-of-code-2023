@@ -49,3 +49,9 @@ Notes below relate to the things I learned and the problems I had.
 ⭐ Another 2D array puzzle, more practice for me\
 ⭐ Tried to brute force at first, got my first ever 'out of memory' error\
 ⭐ Figured out I could modify the coordinates by adding 999999 instead of trying to iterate through a 2D array with millions of rows and columns... !
+
+#### Day 12
+⭐ I'm already missing the 2D array puzzles 😂\
+⭐ I used loads of help for today\
+⭐ I learned about memoization and keeping a cache of calculations that had already been done\
+⭐ and about recursion, which I used to follow all the possible "branches"
