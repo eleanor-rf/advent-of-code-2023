@@ -55,3 +55,8 @@ Notes below relate to the things I learned and the problems I had.
 ⭐ I used loads of help for today\
 ⭐ I learned about memoization and keeping a cache of calculations that had already been done\
 ⭐ and about recursion, which I used to follow all the possible "branches"
+
+#### Day 13
+⭐ My wish granted so quickly, another 2D array puzzle... with transposition!\
+⭐ I think I might actually enjoy these now\
+⭐ Used two counters to increment "up" and "down" (makes less sense for the transposed version) from the curent index and check for equality
