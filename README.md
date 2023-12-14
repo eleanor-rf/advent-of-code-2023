@@ -60,3 +60,7 @@ Notes below relate to the things I learned and the problems I had.
 ⭐ My wish granted so quickly, another 2D array puzzle... with transposition!\
 ⭐ I think I might actually enjoy these now\
 ⭐ Used two counters to increment "up" and "down" (makes less sense for the transposed version) from the curent index and check for equality
+
+#### Day 14
+⭐ I definitely feel 1000000000x more confident with 2D arrays now\
+⭐ Today was a bit frustrating and I tripped up a few times because of array indexing!
