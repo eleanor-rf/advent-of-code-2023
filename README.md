@@ -64,3 +64,6 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 14
 ⭐ I definitely feel 1000000000x more confident with 2D arrays now\
 ⭐ Today was a bit frustrating and I tripped up a few times because of array indexing!
+
+#### Day 15
+⭐ I liked today, pretty straightforward parsing the input then making a hashmap (just an object in JS) for calculations
