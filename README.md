@@ -67,3 +67,7 @@ Notes below relate to the things I learned and the problems I had.
 
 #### Day 15
 ⭐ I liked today, pretty straightforward parsing the input then making a hashmap (just an object in JS) for calculations
+
+#### Day 16 - Part 1
+⭐ I think I may finally understand recursion now\
+⭐ Not sure when I'll return for part 2... one day!
