@@ -68,6 +68,8 @@ Notes below relate to the things I learned and the problems I had.
 #### Day 15
 ⭐ I liked today, pretty straightforward parsing the input then making a hashmap (just an object in JS) for calculations
 
-#### Day 16 - Part 1
+#### Day 16
 ⭐ I think I may finally understand recursion now\
-⭐ Not sure when I'll return for part 2... one day!
+⭐ Not sure when I'll return for part 2... one day!\
+⭐ Update p2 probably could've been memo-ized e.g. if paths from different start points share vertices w/ a given direction\
+⭐ Decided it was faster to just brute force it...
